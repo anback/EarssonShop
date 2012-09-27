@@ -1,0 +1,62 @@
+<template name="selected_purchaseorder">
+    {{#if selected_purchaseorder_exists}}
+    <ul class="nav nav-list purchaseorderheading">
+        <li class="nav-header">Inköpsorder</li>
+        <li class="nav-header"><i>Skapad: {{getFormattedDate selected_purchaseorder.createDate}}</i></li>
+    </ul>
+    <table class="table table-striped table-bordered table-condensed purchaseordertable">
+        <thead>
+        <tr>
+            <th>Produkt</th>
+            <th>#</th>
+            <th>kr</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each purchaseorder_rows}}
+        {{>purchaseorder_row}}
+        {{/each}}
+        <tr>
+            <th>Totalt</th>
+            <th>{{totAmount}}</th>
+            <th>{{totPrice}}</th>
+            <th></th>
+        </tr>
+        </tbody>
+    </table>
+
+    <button class="btn btn-success order pull-right" href="#">
+        <i class="icon-shopping-cart icon-white"></i>
+        Gå till kassan
+    </button>
+    {{else}}
+    <ul class="nav nav-list purchaseorderheading">
+        <li class="nav-header">Inköpsorder</li>
+    </ul>
+    <table class="table table-striped table-bordered table-condensed purchaseordertable">
+        <thead>
+        <tr>
+            <th>Produkt</th>
+            <th>#</th>
+            <th>kr</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th>Totalt</th>
+            <th>{{totAmount}}</th>
+            <th>{{totPrice}}</th>
+            <th></th>
+        </tr>
+        </tbody>
+    </table>
+    <button class="btn btn-success order pull-right" href="#">
+        <i class="icon-shopping-cart icon-white"></i>
+        Gå till kassan
+    </button>
+    {{/if}}
+</template>
+
+        <!-- Nästa steg är väl att fixa mail -->

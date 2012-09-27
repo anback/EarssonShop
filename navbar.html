@@ -1,0 +1,26 @@
+<template name="navbar">
+
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="#">
+                    <!--img name="cms" alt="Earsson logo" width="182px" height="60px"/-->
+                    <img src="{{logoimageurl}}" alt="Earsson logo" />
+                </a>
+                <div class="nav-collapse collapse">
+                    <ul class="topnav nav pull-right">
+                        {{>user}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</template>
+
+

@@ -1,0 +1,48 @@
+//lite intressanta queries
+find /path -name "name" -type d
+
+ssh -i .ssh/myhosts.pem ubuntu@ec2-46-137-50-196.eu-west-1.compute.amazonaws.com
+
+//Install prerequisitues
+sudo apt-get update
+sudo apt-get dist-upgrade
+sudo reboot
+
+sudo apt-get install g++
+sudo apt-get install erlang-base erlang-dev erlang-eunit erlang-nox
+sudo apt-get install libmozjs185-dev libicu-dev libcurl4-gnutls-dev libtool
+
+//Make CouchDB
+scp -i .ssh/myhosts.pem Downloads/apache-couchdb-1.2.0.tar.gz ubuntu@ec2-46-137-50-196.eu-west-1.compute.amazonaws.com:.
+tar -xf apache-couchdb-1.2.0.tar.gz 
+sudo apt-get install make
+make
+sudo make install
+
+//Set CouchDB as a service
+sudo adduser --disabled-login --disabled-password --no-create-home couchdb
+sudo chown -R couchdb:couchdb /usr/local/var/log/couchdb
+sudo chown -R couchdb:couchdb /usr/local/var/lib/couchdb
+sudo chown -R couchdb:couchdb /usr/local/var/run/couchdb
+sudo ln -s /usr/local/etc/init.d/couchdb  /etc/init.d
+sudo update-rc.d couchdb defaults
+
+sudo su
+nano /usr/local/etc/couchdb/local.ini
+//change bind to 0.0.0.0
+
+//Install mongodb
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
+nano /etc/apt/sources.list.d/10gen.list
+//add deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen
+sudo apt-get update
+sudo apt-get install mongodb-10gen
+sudo update-rc.d mongodb defaults
+
+//Install node js
+scp -i .ssh/myhosts.pem Downloads/node-v0.6.21.tar.gz ubuntu@ec2-46-137-50-196.eu-west-1.compute.amazonaws.com:.
+tar -zxf node-v0.6.21.tar.gz
+cd node-v0.6.21.tar.gz
+sudo apt-get install libssl-dev
+make //take some time
+sudo make install

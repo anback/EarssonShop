@@ -1,0 +1,36 @@
+<template name="login">
+    <div class="modal hide fade in" id="loginModal">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">×</button>
+            <img src="{{logoimageurl}}" alt="Earsson logo" />
+            <h3>Inloggning för  Hörselkliniker</h3>
+        </div>
+        <div class="modal-body">
+
+
+            <form class="form-horizontal loginform">
+                <fieldset>
+                    <div class="loginform control-group control-group-username">
+                        <label class="control-label" for="username">Emailaddress:</label>
+                        <div class="controls">
+                            <input type="text" class="input-xlarge" id="username">
+                        </div>
+                    </div>
+                    <div class="loginform control-group control-group-password">
+                        <label class="control-label" for="password">Lösenord: </label>
+                        <div class="controls">
+                            <input type="password" class="input-xlarge" id="password">
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button id="loginbutton" class="btn">Logga in</button>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $('#loginModal').modal('toggle');
+    </script>
+</template>

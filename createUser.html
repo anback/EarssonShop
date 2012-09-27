@@ -1,0 +1,38 @@
+<template name="createUser">
+    <div class="modal hide fade in" id="createUserModal">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">×</button>
+            <h3>Skapa Användare</h3>
+        </div>
+        <div class="modal-body">
+            <form class="form-horizontal create-user-form">
+                <fieldset>
+                    <div class="control-group">
+                        <label class="control-label" for="cu-email">Email: </label>
+                        <div class="controls">
+                            <input type="text" class="input-xlarge" id="cu-email">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="cu-name">Namn: </label>
+                        <div class="controls">
+                            <input type="text" class="input-xlarge" id="cu-name">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="cu-vouchercode">Rabattkod: </label>
+                        <div class="controls">
+                            <input type="text" class="input-xlarge" id="cu-vouchercode">
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button id="createUserButton" class="btn btn-success btn-large order pull-right ok-button" href="#">
+                <i class="icon-ok icon-white"></i>
+                Skapa Användare
+            </button>
+        </div>
+    </div>
+</template>

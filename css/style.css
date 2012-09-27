@@ -1,0 +1,224 @@
+/* NAVBAR */
+
+.nav {
+  margin-bottom: 22px;
+}
+
+.navbar {
+  margin-bottom: 10px;
+}
+
+.navbar .container {
+  width: auto;
+}
+
+.navbar-inner {
+
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #CCC;
+
+  background-color: #FFF;
+  background-image: -moz-linear-gradient(top, #FFF, #FFF);
+  background-image: -ms-linear-gradient(top, #FFF, #FFF);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FFF), to(#FFF));
+  background-image: -webkit-linear-gradient(top, #FFF, #FFF);
+  background-image: -o-linear-gradient(top, #FFF, #FFF);
+  background-image: linear-gradient(top, #FFF, #FFF);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF', endColorstr='#FFF', GradientType=0);
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-box-shadow: 0 0px 0px rgba(0,0,0,0), inset 0 0px 0 rgba(0,0,0,0);
+  -moz-box-shadow: 0 0px 0px rgba(0,0,0,0), inset 0 0px 0 rgba(0,0,0,0);
+  box-shadow: 0 0px 0px rgba(0,0,0,0), inset 0 0px 0 rgba(0,0,0,0);
+}
+
+.navbar .nav > li > a {
+  /*padding: 29px 10px 31px;*/
+  color: #4A4C7E;
+  text-shadow: 0 0px 0 rgba(0, 0, 0, 0);
+}
+
+.navbar .nav > li > a:hover {
+     /*padding: 29px 10px 31px;*/
+     color: #7072ac;
+     text-shadow: 0 0px 0 rgba(0, 0, 0, 0);
+ }
+
+.navbar .nav > li.welcometext {
+    padding: 9px 10px 11px;
+}
+
+
+
+.nav {
+  font-size:  18px;
+}
+
+.navbar .nav {
+    margin-top: 20px;
+}
+
+.navbar .brand {
+  padding: 8px 20px 12px;
+}
+
+.navbar > .navbar-inner > .container > a.btn-navbar {
+    margin-top: 20px;
+}
+
+.navbar .btn-navbar {
+    background-color: #4A4C7E;
+}
+
+.navbar .btn-navbar {
+    background-image: -ms-linear-gradient(top, #606295, #4A4C7E);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#606295), to(#4A4C7E));
+    background-image: -webkit-linear-gradient(top, #606295, #4A4C7E);
+    background-image: -o-linear-gradient(top, #606295, #4A4C7E);
+    background-image: linear-gradient(top, #606295, #4A4C7E);
+    background-image: -moz-linear-gradient(top, #606295, #4A4C7E);
+}
+
+
+/* NAV BAR END */
+
+/* SHOWCASE */
+
+.showcase {
+  background-color: #f5f5f5;
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: #e8e8e8;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #ccc;
+    border:
+
+}
+/*
+.topnav li {
+    padding: 29px 10px 31px;
+}
+*/
+
+.modal.fade.in {
+    top: 60%;
+}
+
+.modal-backdrop.fade.in {
+    opacity: 0.4;
+}
+
+.libutton:hover {
+    color: #646464;
+    cursor: pointer;
+}
+
+.form-horizontal .loginform, form.loginform {
+    margin-bottom: 0px;
+}
+
+input.amount {
+    padding: 0px;
+    margin-left: 10px;
+    width: 35px;
+}
+
+.nav-list > .active > a,
+.nav-list > .active > a:hover {
+    background-color: #4a4c7e;
+}
+
+a {
+    color: #4a4c7e;
+}
+a:hover {
+    color: #272842;
+}
+
+.accordion {
+    margin-bottom: 6px;
+}
+
+
+.productpicture {
+    margin-top: 10px;
+}
+
+.price {
+    color: #333;
+    cursor: default;
+}
+
+#alert-area .alert {
+    text-align: center;
+    margin-bottom: 5px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+}
+
+table.purchaseordertable td {
+    font-size: 9px;
+}
+
+table.purchaseordertable th {
+    font-size: 10px;
+}
+
+.purchaseorderheading {
+    margin-bottom: 5px;
+}
+
+.purchaseorderheading li.nav-header {
+    padding-left: 0px;
+    margin-top: 3px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.ok-button {
+    margin-left: 5px;
+}
+
+.accordion-body {
+    width: 100%;
+}
+
+.loginlogo {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    width: 182px;
+}
+
+#loginModal .modal-header img,
+#changePasswordModal .modal-header img
+{
+    float: left;
+    width: 80px;
+}
+
+
+#loginModal .modal-header h3,
+#changePasswordModal .modal-header h3{
+    text-align: center;
+}
+
+span.product-name {
+    margin-left: 10px;
+    cursor: pointer;
+
+}
+
+a.accordion-toggle {
+    text-decoration: none;
+    color: #333;
+
+}
+
+a.accordion-toggle:hover {
+    font-weight: bold;
+    text-decoration: infotext;
+}

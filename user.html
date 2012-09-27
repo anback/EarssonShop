@@ -1,0 +1,11 @@
+<template name="user">
+    {{#unless isloggedin }}
+    <li id="login-button" class="libutton"><a>Logga in</a></li>
+    {{else}}
+    <li class="welcometext">Välkommen <strong>{{user.name}}</strong> till Earssons webshop för hörselkliniker.</li>
+    {{#if isSuperUser}}
+    <li id="create-user-button" class="libutton"><a>Skapa Användare</a></li>
+    {{/if}}
+    <li id="logout-button" class="libutton"><a>Logga ut</a></li>
+    {{/unless}}
+</template>

@@ -1,0 +1,18 @@
+table.purchaseordertable td {
+    font-size: 12px;
+}
+
+table.purchaseordertable {
+    width: 500px;
+}
+table.purchaseordertable th {
+    font-size: 14px;
+}
+
+table.purchaseordertable tr:last-child {
+    font-weight: bold;
+}
+
+body {
+    margin-left: 50px;
+}

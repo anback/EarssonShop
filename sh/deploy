@@ -1,0 +1,12 @@
+#!/bin/sh
+
+cd /Users/andersback/Projects/shop.earsson.se
+echo "Bundling .."
+meteor bundle myapp.tgz
+cd /Users/andersback/
+echo "Sending to remote machine"
+scp -F ~/.ssh/config ~/Projects/shop.earsson.se/myapp.tgz earsson:.
+echo "Removing myapp.tgz"
+rm /Users/andersback/Projects/shop.earsson.se/myapp.tgz
+echo "unpacking and executing on remote machine"
+ssh earsson 'bash -s' < Projects/shop.earsson.se/sh/deployremote.sh
