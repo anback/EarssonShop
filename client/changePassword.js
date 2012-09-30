@@ -1,5 +1,9 @@
 Template.changePassword.events = {
     'click #changePasswordbutton' : function () {
+
+        if($('#changePasswordbutton').hasClass('disabled'))
+            return;
+
         var user = Session.get("currentuser");
         user.password = $('#changedPassword').val();
         user.hasChangedPassword = true;
@@ -16,4 +20,18 @@ Template.changePassword.events = {
             }
         });
     }
+}
+
+function checkPassword() {
+    if($('#changedPassword').val() != $('#confirmpassword').val() || $('#changedPassword').val() == '')
+    {
+        $('.changePasswordform .control-group-confirmpassword').addClass('error');
+        $('#changePasswordbutton').addClass('disabled');
+    }
+    else
+    {
+        $('.changePasswordform .control-group-confirmpassword').removeClass('error');
+        $('#changePasswordbutton').removeClass('disabled');
+    }
+
 }
