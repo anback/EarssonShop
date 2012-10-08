@@ -3,7 +3,8 @@ var cms_url = 'http://shop.earsson.se/cms/earsson/';
 //Call with item="general.logo"
 var getTextFromCMS = function(item) {
     var parts = item.split(".");
-    return Session.get(parts[0])[parts[1]];
+    var res = Session.get(parts[0])[parts[1]]
+    return (res) ? res : ""; // null check
 }
 
 //Call with item="general"
