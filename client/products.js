@@ -47,8 +47,8 @@ Template.product.events = {
         }
 
         $("#" + getUniqueAmountForProduct(this)).val("");
-
-        Meteor.call("createUpdatePurchaseOrder", Session.get("currentuser")._id, purchaseOrderRow, function(err, res) {
+        Session.get("currentuser")
+        Meteor.call("createUpdatePurchaseOrder", currentUser._id, purchaseOrderRow, function(err, res) {
             if(res) //new id
                 Session.set("selected_purchaseorder", res);
         });

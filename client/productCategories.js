@@ -2,7 +2,8 @@ Session.set("selected_productcategory", null);
 
 Template.app.productcategories = function() {
     //return ProductCategories.find();
-    var pcs = Session.get("productcategories");
+    Session.get("productcategories");
+    var pcs = cms_data["productcategories"];
     var res = [];
     for (var key in pcs) {
         if(key.indexOf("_") == -1)
@@ -25,7 +26,8 @@ Template.productcategory.events = {
 var hasToogledProductOnce = false;
 
 Template.products.products_from_selected_pc = function() {
-    var pcs = Session.get("productcategories");
+    Session.get("productcategories");
+    var pcs = cms_data["productcategories"];
     var spc = Session.get("selected_productcategory")
     if(pcs && spc)
     {

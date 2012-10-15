@@ -1,7 +1,8 @@
 Users = new Meteor.Collection("users");
 
 Template.user.isSuperUser = function() {
-    return Session.get("currentuser").superuser;
+    Session.get("currentuser");
+    return currentUser.superuser;
 }
 
 Template.createUser.events = {

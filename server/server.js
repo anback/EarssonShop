@@ -58,8 +58,8 @@ Meteor.methods({
         console.log(user);
 
         var mail = createOrderConfirmationMail(po, user);
-
-        Email.send({from:'info@earsson.se', to:user.email, subject: mail.subject, html: mail.body});
+        console.log(user);
+        //Email.send({from:'info@earsson.se', to:user.email, subject: mail.subject, html: mail.body});
 
         console.log("Setting status 'confirmed' on po with id: " + id);
         po.status = "Confirmed";

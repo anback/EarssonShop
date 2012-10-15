@@ -1,15 +1,15 @@
 
 
 Template.confirmOrder.username = function() {
-    var currentuser = Session.get("currentuser");
-    if(currentuser)
-        return currentuser.name;
+    Session.get("currentuser");
+    if(currentUser)
+        return currentUser.name;
 }
 
 Template.confirmOrder.useremail = function() {
-    var currentuser = Session.get("currentuser");
-    if(currentuser)
-        return currentuser.email;
+    Session.get("currentuser");
+    if(currentUser)
+        return currentUser.email;
 }
 
 Template.confirmOrder.purchaseorder_rows = function() {

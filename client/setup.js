@@ -5,11 +5,10 @@ PurchaseOrderRows = new Meteor.Collection("purchaseorderrows");
 Meteor.subscribe("productcategories");
 
 Meteor.autosubscribe(function() {
+    Session.get("currentuser");
 
-    var currentuser = Session.get("currentuser");
-
-    if(currentuser)
-        Meteor.subscribe('purchaseorders', currentuser._id, function () {
+    if(currentUser)
+        Meteor.subscribe('purchaseorders', currentUser._id, function () {
             if (!Session.get("selected_purchaseorder")) {
                 var po = PurchaseOrders.findOne({status : "Inserted"}, {sort : {createDate : -1}});
                 if (po)

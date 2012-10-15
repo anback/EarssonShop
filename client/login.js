@@ -1,5 +1,5 @@
 Session.set("currentuser", null);
-
+var currentUser = {};
 
 /* Open Login Modal @ startup
 (function() {
@@ -36,7 +36,8 @@ Template.product.isloggedin = function () {
 }
 
 Template.user.user = function() {
-    return Session.get("currentuser");
+    Session.get("currentuser");
+    return currentUser;
 }
 
 Template.login.events = {
@@ -55,7 +56,8 @@ Template.login.events = {
 
             }
             else {
-                Session.set("currentuser", res);
+                Session.set("currentuser", new Date().getTime());
+                currentUser = res;
                 $('#loginModal').modal('toggle');
                 $('.loginform .control-group-username').removeClass('error');
                 $('.loginform .control-group-password').removeClass('error');

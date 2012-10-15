@@ -4,7 +4,8 @@ Template.changePassword.events = {
         if($('#changePasswordbutton').hasClass('disabled'))
             return;
 
-        var user = Session.get("currentuser");
+        Session.get("currentuser");
+        var user = currentUser;
         user.password = $('#changedPassword').val();
         user.hasChangedPassword = true;
 
